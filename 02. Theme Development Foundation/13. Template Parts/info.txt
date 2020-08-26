@@ -1,0 +1,20 @@
+            <!-- Posts
+            ============================================= -->
+            <div id="posts">
+            	<?php 
+            		if(have_posts())
+            		{
+            			while(have_posts())
+            			{
+            				the_post();
+
+            				//1. content-excerpt.php
+            				get_template_part('partials/post/content-excerpt' );
+            				//1.content-excerpt.php 2. content.php
+            				//get_template_part('partials/post/content', 'excerpt');
+            			}
+            		}
+
+            	 ?>
+
+            </div><!-- #posts end -->
